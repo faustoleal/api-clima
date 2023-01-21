@@ -1,0 +1,289 @@
+:root {
+  --main-color: #edf0f0;
+  --color-rgba: rgba(0, 0, 0, 0.4);
+  --background-color: #141414;
+  --color-secundary: #3b3d3d;
+  --color-3: #424242;
+  --color-4: #595959;
+  --color-5: #757575;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  color: var(--main-color);
+  background-image: url(https://img.freepik.com/foto-gratis/paisaje-nubes-fantastico_1232-490.jpg?w=740&t=st=1673017240~exp=1673017840~hmac=673782a088ec84cc13e557a16b018958a9a060b8ba4921761c384e697045356b);
+  height: 100%;
+  background-position: 50% 75%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--color-secundary);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-4);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-5);
+}
+
+#windy {
+  width: 98%;
+  height: 500px;
+  margin: 35px auto 25px auto;
+  border-radius: 15px;
+}
+
+@media (min-height: 1150px) {
+  #windy {
+    height: 750px;
+  }
+}
+
+/* titulo */
+
+.title {
+  display: flex;
+  width: 98%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin: 5px;
+  padding: 5px;
+  font-size: 40px;
+}
+
+.title i {
+  font-size: 48px;
+  margin: 5px 0;
+  padding: 5px 0;
+  color: var(--main-color);
+}
+
+/* ciudad */
+
+.ciudad {
+  width: 98%;
+  margin: 0 auto;
+  background-color: var(--color-rgba);
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.ciudad-details {
+  flex-basis: 100%;
+  padding: 10px;
+}
+
+.ciudad-nombre,
+.ciudad-fecha {
+  padding: 0 15px;
+}
+
+.temperatura {
+  flex-basis: 50%;
+  display: flex;
+  padding: 10px;
+}
+
+.ciudad-clima {
+  width: 100px;
+  display: block;
+  object-fit: contain;
+}
+
+.ciudad-temp {
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+}
+
+.ciudad-datos {
+  flex-basis: 50%;
+  list-style: none;
+  text-align: end;
+  margin: 0;
+  padding: 10px;
+}
+
+.ciudad-datos li {
+  padding: 5px;
+}
+
+.info {
+  width: 75px;
+  margin: 10px auto;
+  color: var(--main-color);
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.info:hover {
+  background-color: var(--background-color);
+}
+
+.informacion {
+  flex-basis: 100%;
+  margin: 10px auto;
+  display: none;
+}
+
+.informacion-box {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+}
+
+.informacion-box div {
+  border-bottom: 1px solid var(--main-color);
+  padding: 5px;
+}
+
+.informacion-box span {
+  display: block;
+  padding: 5px;
+}
+
+.informacion-box p {
+  margin: 10px;
+  padding-left: 10px;
+}
+
+.is-active {
+  display: block;
+}
+
+/* responsive */
+
+@media (max-width: 400px) {
+  .temperatura {
+    flex-basis: auto;
+  }
+
+  .ciudad-clima {
+    width: 75px;
+    padding: 5px;
+  }
+
+  .ciudad-temp {
+    font-size: 24px;
+    padding: 5px;
+  }
+
+  .ciudad-datos {
+    flex-basis: auto;
+    text-align: start;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .ciudad {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ciudad-details {
+    padding: 5px;
+  }
+
+  .temperatura {
+    padding: 0;
+  }
+
+  .ciudad-datos {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .info {
+    margin: 15px auto !important;
+  }
+}
+
+/* clima */
+
+.weather {
+  display: flex;
+  width: 98%;
+  margin: 5px auto;
+  overflow-x: auto;
+}
+
+.weather::-webkit-scrollbar {
+  width: 5px;
+}
+
+.weather::-webkit-scrollbar-track {
+  background-color: var(--color-rgba);
+}
+
+.weather::-webkit-scrollbar-thumb {
+  background-color: var(--color-4);
+  border-radius: 5px;
+}
+
+.weather::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-5);
+}
+
+.clima {
+  height: auto;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  margin: 15px 5px;
+  background-color: var(--color-rgba);
+}
+
+.clima-box {
+  width: 125px;
+  height: inherit;
+  padding: 5px;
+}
+
+.clima-icon {
+  display: block;
+  width: 64px;
+  margin: 5px auto;
+}
+
+.clima-temp {
+  font-size: 24px;
+  text-align: center;
+}
+
+.clima-date {
+  font-size: smaller;
+  text-align: center;
+}
