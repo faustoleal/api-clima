@@ -10,5 +10,5 @@ windyInit(options, (windyAPI) => {
   const { map } = windyAPI;
 
   L.popup().setLatLng([-34.2, -58.9]);
-  console.log(windyAPI);
+  /* console.log(windyAPI); */
 });
