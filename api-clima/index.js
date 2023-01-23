@@ -13,7 +13,7 @@ function getCiudad() {
   fetch(DOMINIO)
     .then((res) => (res.ok ? res.json() : Promise.reject(res)))
     .then((json) => {
-      console.log(json);
+      /* console.log(json); */
       $clima.querySelector(".ciudad-nombre").innerHTML = json.name;
       $clima.querySelector(".ciudad-fecha").innerHTML =
         new Date().toLocaleString();
@@ -88,7 +88,7 @@ function getClima() {
       /* console.log(json); */
       let lista = json.list;
       let list = lista.slice(28);
-      console.log(list);
+      /* console.log(list); */
       list.forEach((el) => {
         $template.querySelector(
           ".clima-icon"
