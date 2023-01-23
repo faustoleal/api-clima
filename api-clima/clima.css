@@ -186,28 +186,6 @@ h1 {
 /* responsive */
 
 @media (max-width: 400px) {
-  .temperatura {
-    flex-basis: auto;
-  }
-
-  .ciudad-clima {
-    width: 75px;
-    padding: 5px;
-  }
-
-  .ciudad-temp {
-    font-size: 24px;
-    padding: 5px;
-  }
-
-  .ciudad-datos {
-    flex-basis: auto;
-    text-align: start;
-    padding: 5px;
-  }
-}
-
-@media (max-width: 380px) {
   .ciudad {
     align-items: center;
     justify-content: center;
