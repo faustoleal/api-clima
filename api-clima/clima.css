@@ -46,16 +46,32 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-5);
 }
 
-#windy {
+.container {
   width: 98%;
   height: 500px;
-  margin: 35px auto 25px auto;
+  margin: 15px auto;
+  background-color: var(--color-rgba);
+  position: relative;
   border-radius: 15px;
 }
 
+#windy {
+  width: 96%;
+  height: 475px;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media (min-height: 1150px) {
-  #windy {
+  .container {
     height: 750px;
+  }
+
+  #windy {
+    height: 725px;
   }
 }
 
@@ -91,7 +107,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid transparent;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .ciudad-details {
